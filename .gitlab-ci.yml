@@ -1,0 +1,24 @@
+stages:
+- build
+- ship
+- deploy
+- clear
+
+job1:
+  stage: build
+  script:
+    - pwd
+    - ls -l
+job1-1:
+  stage: ship
+  script:
+    - uptime
+job2:
+  stage: deploy
+  script:
+    - echo $PATH
+
+job-clear:
+  stage: clear
+  script: 
+    - uname

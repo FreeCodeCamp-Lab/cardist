@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "dotenvr": "^0.1.9",
+    "node-gd": "^1.5.0",
+    "request-agent": "^1.0.3",
+    "xiaolan": "^1.5.19"
+  }
+}

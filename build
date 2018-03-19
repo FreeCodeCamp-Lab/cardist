@@ -1,0 +1,17 @@
+rm -f ./pic/*.jpg
+
+echo "clear pic"
+
+node runner.js
+
+docker rmi -f registry.cn-hangzhou.aliyuncs.com/fcc-cd/cardist:nginx cardist:nginx
+
+cd ./pic
+
+docker build -t cardist:nginx .
+
+docker tag cardist:nginx registry.cn-hangzhou.aliyuncs.com/fcc-cd/cardist:nginx
+
+docker push registry.cn-hangzhou.aliyuncs.com/fcc-cd/cardist:nginx
+
+
