@@ -1,7 +1,7 @@
 const fs = require('fs');
 const EOL = require('os').EOL;
 
-const list = fs.readFileSync('./tmp').toString().split(EOL);
+const list = fs.readFileSync('./tmp.txt').toString().split(EOL);
 
 let result = [];
 
