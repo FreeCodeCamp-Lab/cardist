@@ -1,10 +1,12 @@
 const request = require('request');
 const lists = require('./list.json');
-const apikey = "XX"
+const smsConfig = require('./sms_config');
+const apikey = smsConfig.APP_KEY;
 const fs = require('fs');
 
+
 function postSms(text, mobile) {
-    const url = '#';//"https://sms.yunpian.com/v2/sms/batch_send.json";
+    const url = smsConfig.URL;
     const post_data = {
         'apikey': apikey,
         'mobile': mobile,
@@ -26,7 +28,8 @@ function postSms(text, mobile) {
     let err = [];
     for (let k in lists) {
         let item = lists[k];
-        let text = `【FCC成都】你报名的《Web前端大会》将于周日举行，记得准时参加~ 详情请点击: http://i.web-conf.tk/${item.id}`
+        let text = `【FCC成都】《React技术专场活动》将于本月31号周六举行，记得准时参加~详情点击:http://i.web-conf.tk/${item.id}`
+        // console.log(text.length);
         let r = await postSms(text, item.mobile);
         if(r!='ok'){
             err.push(item);

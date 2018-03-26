@@ -9,7 +9,7 @@ const result = require('./list.json')
 async function make() {
     for(let k in result){
         await render(result[k].name,result[k].id);
-        console.log(result[k].name)
+        console.log(result[k].name);
     }
 }
 
