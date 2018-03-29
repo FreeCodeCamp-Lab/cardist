@@ -1,4 +1,5 @@
-
+![Certification](http://fcc.lanhao.name/fcc-readme-icon)
+![Certification](http://fcc.lanhao.name/fcc-readme-icon)
 
 - 准备tmp.txt (参考 tmp.example.txt)
 
