@@ -18,15 +18,17 @@ async function render(name, id) {
         let chs = name.split('')
 
         for (let k in chs) {
-
+          //英文字符算 0.55
           if (/[a-zA-Z\s]/.test(chs[k])) {
             length += 0.55;
           } else {
             length += 1;
           }
         }
-
+        //计算出字号
         let fontSize = Number.parseInt(180 / length);
+
+        //计算出左边距
         let xOffset = Number.parseInt(530 - fontSize * (chs.length / 2)) - 20;
         xOffset = (xOffset < 420) ? 420 : xOffset;
       

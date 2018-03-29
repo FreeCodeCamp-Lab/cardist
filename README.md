@@ -1,8 +1,9 @@
+![Certification](http://www.lanhao.name/img/upload/fcc.svg)
 
 - 准备tmp.txt (参考 tmp.example.txt)
 
-- parse.js  生成 list.json
+-  node parse.js  //生成 list.json
 
-- runner.js 生成图片
+-  node runner.js //生成图片
 
-- sms.js 发短信
+-  node sms.js //发短信

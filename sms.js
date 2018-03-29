@@ -34,7 +34,7 @@ function postSms(text, mobile) {
         if(r!='ok'){
             err.push(item);
         }
-        console.log(`${r} ; ${item.mobile}`);
+        console.log(`${r} ;${item.id}; ${item.mobile}`);
     }
     fs.writeFileSync('./err.json', JSON.stringify(err,null,2));
 })();
